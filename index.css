@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    font-family: Roboto,sans-serif;
+}
+
+/* ----------------popup container(Grand parent)--------------------- */
+.popup-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(83, 74, 74, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+
+/* ----------------popup(parent)--------------------- */
+
+
+
+.popup{
+    
+    width: 78%;
+    height: 75%;
+    background-color: #FFFFFF;
+  
+}
+
+/* 4 children--- 1. box, 2.cities, 3. other-cities, 4. hide */
+
+
+/*---------------------- box children----------------------- */
+.box{
+    display: flex;
+    padding: 20px;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+    
+.box .search{
+   
+
+    width: 100%;
+    height: 45px;
+    border: 0.5px solid #dadada;
+    font-size: 15px;
+    text-indent: 15px;
+    padding-left: 35px ;
+
+    
+}
+
+.box .search:focus{
+    outline: none;
+}
+
+.search-icon{
+     position: absolute;
+    top: 33px;
+    left: 30px;
+    color: #AAAAAA;
+    
+}
+
+/*-------------------- cities children---------------------------- */
+
+.cities{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    /* border: 1px solid blue; */
+    padding: 10px 15px;
+}
+
+.cities > p{
+    color: #535353;  
+    
+}
+
+.cities .imgs{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    padding-top: 20px;
+    
+}
+
+.test{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.test p{
+    color: #6e6e6e;
+    font-size: 15px;
+    
+}
+
+.test img{
+    width: 70px;
+    height: 70px;
+}
+
+.test:hover  p{
+    cursor: pointer;
+    color: black;
+}
+
+.test:hover  img{
+    cursor: pointer;
+    
+}
+
+/* ---------------other-cities children ------------------------*/
+
+.other-cities{
+    padding-top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    /* border: 1px solid red; */
+    font-size: 17px;
+    z-index: 15;
+    color: #535353;
+    
+}
+
+.city-row{
+    width: 100%;
+    height: 120px;
+    
+    display: flex;
+    /* border: 1px solid blue; */
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 13px;
+    padding-top: 18px;
+    z-index: 10;
+
+    /* to get the scroll bar vertically and avoid overflow bottom */
+    overflow-y: scroll;
+    
+
+    
+}
+
+.city-row li:hover{
+    color: black;
+    cursor: pointer;
+}
+
+ /* how to hide scrollbar */
+
+.city-row::-webkit-scrollbar{
+    display: none;
+}
+
+.names li{
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+/* -------------hide children---------------- */
+
+.hide{
+    display: flex;
+    justify-content: center;
+    color: red;
+    
+    padding: 25px 0;
+    z-index: 50;
+}
+
